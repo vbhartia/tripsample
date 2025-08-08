@@ -1,0 +1,8 @@
+
+.accordion-item { cursor: grab; }
+.accordion-item:active { cursor: grabbing; }
+.ticket-link { font-size: 0.95rem; margin-top: 0.25rem; }
+textarea { resize: vertical; }
+.section-notes { background: #fff; border: 1px solid #e9ecef; border-radius: .5rem; padding: .75rem; }
+.section-notes .btn { min-width: 7rem; }
+.ghost { background: #fff3cd !important; }

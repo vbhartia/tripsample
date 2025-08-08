@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4-Day Spain Trip Itinerary</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light text-dark">
+  <div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h1 class="h3 m-0">4-Day Spain Trip Itinerary</h1>
+      <div class="d-flex gap-2">
+        <button id="export-notes" class="btn btn-primary btn-sm" title="Export current notes">Export Notes</button>
+        <button id="clear-notes" class="btn btn-outline-danger btn-sm" title="Clear all saved notes">Clear Notes</button>
+      </div>
+    </div>
+    <p class="text-muted">Drag and drop days to reorder. Add notes per section. Ticket links included where available. Works fully offline.</p>
+    <div id="itinerary-container" class="accordion"></div>
+  </div>
+
+  <!-- Embedded itinerary JSON -->
+  <script id="embedded-itinerary" type="application/json">{"title": "4-Day Spain Trip Itinerary", "days": [{"day": "Day 1", "title": "Explore Barcelona \u2013 Gothic Quarter & Gaud\u00ed", "activities": {"morning": ["Arrive in Barcelona, check into hotel", "Light breakfast of churros con chocolate", "Explore the Gothic Quarter (Barri G\u00f2tic): wander through cobbled alleys, see the Barcelona Cathedral"], "afternoon": ["Visit La Sagrada Fam\u00edlia (pre-book tickets!)", "Stroll along Passeig de Gr\u00e0cia to see Casa Batll\u00f3", "See Casa Mil\u00e0 (La Pedrera)", "Lunch at Cervecer\u00eda Catalana or El Nacional"], "evening": ["Tapas dinner in El Born district", "Optional: Flamenco show at Palau Dalmases"]}}, {"day": "Day 2", "title": "Barcelona \u2013 Beach, Markets, and Montju\u00efc", "activities": {"morning": ["Breakfast at Brunch & Cake", "Explore La Boqueria Market", "Walk down La Rambla to the Columbus Monument"], "afternoon": ["Relax at Barceloneta Beach", "Late lunch at Xiringuito Escrib\u00e0 (paella)", "Take the cable car up to Montju\u00efc, explore the castle", "See the Magic Fountain"], "evening": ["Watch the Magic Fountain Show", "Dinner near Pla\u00e7a d'Espanya"]}}, {"day": "Day 3", "title": "Madrid \u2013 Royalty and Art", "note": "\ud83d\ude84 Travel: Morning high-speed train to Madrid (~2.5 hours on AVE)", "activities": {"morning": ["Arrive in Madrid, drop bags", "Visit the Royal Palace of Madrid and Almudena Cathedral", "Stroll through Plaza Mayor and Puerta del Sol"], "afternoon": ["Explore El Prado Museum (home to Vel\u00e1zquez, Goya, El Greco)", "Lunch at Bot\u00edn (world\u2019s oldest restaurant, try the roast suckling pig)"], "evening": ["Drinks and dinner in La Latina district", "Optional: rooftop bar at C\u00edrculo de Bellas Artes"]}}, {"day": "Day 4", "title": "Madrid \u2013 Culture & Parks", "activities": {"morning": ["Brunch at Federal Caf\u00e9", "Visit Reina Sof\u00eda Museum (see Picasso\u2019s Guernica)"], "afternoon": ["Row a boat or walk in El Retiro Park", "Explore Gran V\u00eda for shopping or people-watching"], "evening": ["Final dinner at StreetXO (creative fusion tapas)", "Optional: Watch a flamenco show at Cardamomo"]}, "departure": "\u2708\ufe0f Fly out of Madrid (or take train/flight back to Barcelona)"}]}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
