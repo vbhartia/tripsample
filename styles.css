@@ -1,4 +1,19 @@
 
+/* Animated gradient background */
+body {
+  background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Card and content tweaks */
 .accordion-item { cursor: grab; }
 .accordion-item:active { cursor: grabbing; }
 .ticket-link { font-size: 0.95rem; margin-top: 0.25rem; }
@@ -6,3 +21,5 @@ textarea { resize: vertical; }
 .section-notes { background: #fff; border: 1px solid #e9ecef; border-radius: .5rem; padding: .75rem; }
 .section-notes .btn { min-width: 7rem; }
 .ghost { background: #fff3cd !important; }
+
+
