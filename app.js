@@ -39,12 +39,12 @@ function sectionKey(dayIndex, sectionName) {
 function saveSectionNote(key) {
   const el = document.getElementById(key);
   localStorage.setItem(key, el.value);
-  // toast UX
-  const btn = el.nextElementSibling?.querySelector('button.btn-primary');
-  if (btn) {
-    const original = btn.textContent;
-    btn.textContent = 'Saved ✓';
-    setTimeout(() => (btn.textContent = original), 1000);
+  const parent = el.parentElement;
+  const primaryBtn = parent.querySelector('button.btn-primary');
+  if (primaryBtn) {
+    const original = primaryBtn.textContent;
+    primaryBtn.textContent = 'Saved ✓';
+    setTimeout(() => (primaryBtn.textContent = original), 1000);
   }
 }
 
@@ -52,7 +52,6 @@ function clearAllNotes() {
   Object.keys(localStorage)
     .filter(k => k.startsWith('itinerary_section_note__'))
     .forEach(k => localStorage.removeItem(k));
-  // Also clear textareas
   document.querySelectorAll('textarea[id^="itinerary_section_note__"]').forEach(t => t.value = '');
 }
 
@@ -122,16 +121,10 @@ function render(data) {
     container.insertAdjacentHTML('beforeend', dayHtml);
   });
 
-  // Drag-and-drop reorder of days
-  Sortable.create(container, {
-    animation: 150,
-    ghostClass: 'ghost'
-  });
+  Sortable.create(container, { animation: 150, ghostClass: 'ghost' });
 }
 
-// Wire buttons
 document.getElementById('export-notes').addEventListener('click', exportNotes);
 document.getElementById('clear-notes').addEventListener('click', clearAllNotes);
 
-// Initial render
 render(getEmbeddedItinerary());
